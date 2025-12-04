@@ -14,3 +14,8 @@ func _on_button_mamma_pressed() -> void:
 		VBeep.new().for_seconds(1.5).at(VirtualBeeper.lookup_note('C4')),
 	])
 	pass
+
+
+func _on_button_simple_pressed() -> void:
+	VirtualBeeper.beep(VBeep.new())
+	pass

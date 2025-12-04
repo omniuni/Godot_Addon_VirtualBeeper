@@ -1,10 +1,10 @@
 class_name VBeep
 extends Node
 
-var _tone_hz: float = VirtualBeeper.TONE_KEY_E4
+var _tone_hz: float = VirtualBeeper.TONE_KEY_A4
 var _sample_rate: float = VirtualBeeper.DEFAULT_BITRATE
 var volume: float = VirtualBeeper.DEFAULT_VOLUME
-var frames_left: int = VirtualBeeper.DEFAULT_BITRATE/2
+var frames_left: int = VirtualBeeper.DEFAULT_BITRATE/4 # Half a second based on the bitrate.
 var phase: float = 0.0
 
 var increment: float = 0:

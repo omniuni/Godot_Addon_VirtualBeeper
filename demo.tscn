@@ -17,8 +17,13 @@ offset_bottom = 40.0
 layout_mode = 2
 columns = 9
 
+[node name="ButtonSimple" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Simple Default"
+
 [node name="ButtonMamma" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Mamma"
 
+[connection signal="pressed" from="VBoxContainer/ButtonSimple" to="." method="_on_button_simple_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonMamma" to="." method="_on_button_mamma_pressed"]
