@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0158f72ngyd8"]
+
+[ext_resource type="Script" uid="uid://bf3m3iw51m2du" path="res://virtual_note_grid.gd" id="1_51qp1"]
+
+[node name="DemoNoteGrid" type="GridContainer"]
+script = ExtResource("1_51qp1")

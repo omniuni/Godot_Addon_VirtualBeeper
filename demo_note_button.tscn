@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp5ieucy4xoig"]
+
+[ext_resource type="Script" uid="uid://ciatmhigaid6k" path="res://demo_note_button.gd" id="1_6l0sl"]
+
+[node name="DemoNoteButton" type="PanelContainer"]
+offset_right = 80.0
+offset_bottom = 8.0
+script = ExtResource("1_6l0sl")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
