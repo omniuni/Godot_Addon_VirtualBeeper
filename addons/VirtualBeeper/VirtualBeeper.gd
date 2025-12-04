@@ -202,10 +202,13 @@ func _generate():
 		var frame_vectors: Array[Vector2] = []
 		for track_name: String in _beeps_tracks:
 			if _beeps_tracks[track_name].size() > 0:
+				var base_phase: float = _beeps_tracks[track_name][0].phase
 				if _beeps_tracks[track_name][0].frames_left < 1:
 					_beeps_tracks[track_name].remove_at(0)
 					if _beeps_tracks[track_name].is_empty():
 						_beeps_tracks.erase(track_name)
+					if _beeps_tracks.has(track_name) and !_beeps_tracks[track_name].is_empty():
+						_beeps_tracks[track_name][0].phase = base_phase
 				if _beeps_tracks.has(track_name) and !_beeps_tracks[track_name].is_empty():
 					var beep = _beeps_tracks[track_name][0]
 					if beep.frames_left > 0:
