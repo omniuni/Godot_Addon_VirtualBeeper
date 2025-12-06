@@ -25,5 +25,10 @@ text = "Simple Default"
 layout_mode = 2
 text = "Mamma"
 
+[node name="ButtonCloseEncounters" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Close Encounters"
+
 [connection signal="pressed" from="VBoxContainer/ButtonSimple" to="." method="_on_button_simple_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonMamma" to="." method="_on_button_mamma_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonCloseEncounters" to="." method="_on_button_close_encounters_pressed"]

@@ -3,6 +3,8 @@ extends Node
 # Constants
 
 const DEFAULT_BITRATE: int = 7350
+const BITRATE_MODERATE: int = 11025
+const BITRATE_HIGH: int = 22050
 const DEFAULT_BUFFER_SECONDS: float = 0.05
 const DEFAULT_VOLUME: float = 0.8
 
@@ -178,10 +180,13 @@ func _safe_start() -> void:
 	_process_lock = true
 	
 	for track_name in _beeps_tracks:
+		var to_remove: Array[int] = []
 		for i in _beeps_tracks[track_name].size():
 			var beep: VBeep = _beeps_tracks[track_name][i]
 			if beep.frames_left < 1:
-				_beeps_tracks[track_name].remove_at(i)
+				to_remove.append(i)
+		for i in to_remove:
+			_beeps_tracks[track_name].remove_at(i)
 				
 	for track_name in _beeps_queue:
 		_beeps_tracks[track_name] = _beeps_queue[track_name]
